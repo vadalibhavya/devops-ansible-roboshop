@@ -1,0 +1,10 @@
+- name: ansible data-types
+  hosts: localhost
+  tasks:
+    - name: check type of variable
+      debug:
+        msg: "variable is {{ ansible_version }} and type is {{ ansible_version | type }}"
+
+    - name: check type of variable
+      debug:
+        msg: "variable is {{ ansible_distribution }} and type is {{ ansible_distribution | type }}"

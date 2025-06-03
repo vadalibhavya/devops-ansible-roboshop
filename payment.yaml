@@ -5,7 +5,7 @@
   tasks:
     - name: Install python 3 packages
       ansible.builtin.dnf:
-        name: {{ item }}
+        name: "{{ item }}"
         state: installed
       with_items:
         - python3

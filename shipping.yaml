@@ -71,7 +71,7 @@
         name: all
         login_user: root
         login_password: RoboShop@1
-        login_host: mysql.daws84s.site
+        login_host: mysql-internal.doubtfree.online
         state: import
         target: "{{ item }}"
       loop:

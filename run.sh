@@ -16,6 +16,7 @@ for service in "${services[@]}"; do
     git clone https://github.com/vadalibhavya/devops-ansible-roboshop.git
   fi
   cd devops-ansible-roboshop
+  git pull
   ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 $service.yaml
 EOF
 

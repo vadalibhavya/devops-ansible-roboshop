@@ -23,8 +23,8 @@
         user: roboshop
         password: roboshop123
         permissions:
-          - vhosts: /
+          - vhost: /
             configure_priv: .*
-            write_priv: .*
             read_priv: .*
+            write_priv: .*
         state: present

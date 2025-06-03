@@ -71,7 +71,7 @@
         name: all
         login_user: root
         login_password: RoboShop@1
-        login_host: mysql-internal.doubtfree.online
+        login_host: mysql.daws84s.site
         state: import
         target: "{{ item }}"
       loop:
@@ -79,8 +79,9 @@
         - /app/db/app-user.sql
         - /app/db/master-data.sql
 
-    - name: restart shipping service
-      tags: import
+    - name: restart shipping
+      tags:
+        - import
       ansible.builtin.service:
-          state: restarted
-          name: shipping
+        state: restarted
+        name: shipping

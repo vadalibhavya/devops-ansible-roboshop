@@ -74,10 +74,10 @@
         login_host: mysql-internal.doubtfree.online
         state: import
         target: "{{ item }}"
-        loop:
-          - /app/db/schema.sql
-          - /app/db/app-user.sql
-          - /app/db/master-data.sql
+      loop:
+        - /app/db/schema.sql
+        - /app/db/app-user.sql
+        - /app/db/master-data.sql
 
     - name: restart shipping service
       tags: import

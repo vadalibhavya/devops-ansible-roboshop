@@ -30,7 +30,7 @@
         dest: /tmp/payment.zip
 
     - name: extract payment code
-      ansible.builtin.unzip:
+      ansible.builtin.unarchive:
         src: /tmp/payment.zip
         dest: /app
         remote_src: yes
